@@ -5,7 +5,7 @@ resources:
   - ../../base
 
 configMapGenerator:
-  - name: test
+  - name: nginx-config
     envs:
       - config.env
-    behavior: create
+    behavior: merge
