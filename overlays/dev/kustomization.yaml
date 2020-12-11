@@ -5,7 +5,11 @@ resources:
   - ../../base
 
 configMapGenerator:
-  - name: nginx-config
+  - name: nginx-config-variables
+    envs:
+      - config-with-variables.env
+    behavior: merge
+  - name: nginx-config-static
     envs:
       - config.env
     behavior: merge

@@ -8,7 +8,10 @@ resources:
   - deployment.yaml
 
 configMapGenerator:
-  - name: nginx-config
+  - name: nginx-config-variables
+    envs:
+      - config-with-variables.env
+  - name: nginx-config-static
     envs:
       - config.env
 
